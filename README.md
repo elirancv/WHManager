@@ -88,6 +88,35 @@ http://localhost:8000/index.html
 4. Click "Install" to begin the installation process
 5. Monitor the installation progress through the interface
 
+## 🛠️ Customizing Apps
+
+You can customize the list of available applications by modifying the `@apps_config.json` file in the `src/web` directory. The configuration file uses a simple JSON structure:
+
+```json
+{
+  "categories": [
+    {
+      "name": "Category Name",
+      "icon": "fas fa-icon-name",
+      "apps": [
+        {
+          "id": "Publisher.AppName",
+          "name": "Display Name",
+          "description": "App description"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Each app entry requires:
+- `id`: The winget package identifier (e.g., "Microsoft.VisualStudioCode")
+- `name`: Display name shown in the interface
+- `description`: Brief description of the application
+
+You can add new categories or modify existing ones to suit your needs. The changes will be reflected in the web interface after restarting the server.
+
 ## 👩‍💻 Development
 
 ### Running the Development Server
