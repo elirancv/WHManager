@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W1ND0WZ 4PP 1N5T4LL3R</title>
+    <title>WHManager - windows application manager</title>
     
     <!-- Favicon and Meta Tags -->
     <link rel="icon" type="image/png" href="favicon.png">
     <meta name="theme-color" content="#00ff9d">
-    <meta name="description" content="Cyberpunk-styled Windows Package Manager Installer">
+    <meta name="description" content="WHManager - A modern windows package manager installer">
     
     <style>
         :root {
@@ -25,7 +25,7 @@
         }
 
         @font-face {
-            font-family: 'Cyberpunk';
+            font-family: 'Share Tech Mono';
             src: url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
         }
 
@@ -548,11 +548,12 @@
     <canvas id="matrix" class="matrix-bg"></canvas>
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
-        <div class="loading-text">G3N3R4T1NG 1N5T4LL3R...</div>
+        <div class="loading-text">Generating Installer...</div>
+        <div class="loading-bar"></div>
     </div>
     <div class="container">
         <header>
-            <h1>W1ND0WZ 4PP 1N5T4LL3R</h1>
+            <h1>WHManager</h1>
             <p class="description">Select the applications you want to install. We'll create a custom installer just for you.</p>
         </header>
 
@@ -596,7 +597,7 @@
             <!-- Categories will be loaded dynamically -->
         </div>
 
-        <button class="install-button" onclick="generateInstaller()">GENERATE INSTALLER</button>
+        <button class="install-button" onclick="generateInstaller()">generate installer</button>
     </div>
 
     <script>
@@ -743,7 +744,7 @@
                 .map(checkbox => checkbox.dataset.id);
 
             if (selectedApps.length === 0) {
-                alert('PL3453 53L3CT 4T L345T 0N3 4PPL1C4T10N!');
+                alert('Please select at least one application!');
                 return;
             }
 
@@ -754,7 +755,7 @@
 
             // Create the batch file content with enhanced installation flags
             let batchContent = '@echo off\n';
-            batchContent += 'echo [+] 1N5T4LL1NG 53L3CT3D 4PPL1C4T10N5...\n';
+            batchContent += 'echo [+] Installing selected applications...\n';
             batchContent += `echo [*] Total apps to install: ${selectedApps.length}\n`;
             batchContent += 'echo [*] Running in silent mode with no upgrades\n';
             batchContent += 'echo [*] Installation started at: %DATE% %TIME%\n\n';
@@ -807,7 +808,7 @@
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'w1nd0wz_4pp_1n5t4ll3r.bat';
+            a.download = 'WHManager_installer.bat';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);

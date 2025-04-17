@@ -10,6 +10,7 @@ class CORSRequestHandler(SimpleHTTPRequestHandler):
 
 if __name__ == '__main__':
     port = 8000
-    print(f"Starting server at http://localhost:{port}")
+    print(f"Starting WHManager server at http://localhost:{port}")
+    print("Press Ctrl+C to stop the server")
     httpd = HTTPServer(('localhost', port), CORSRequestHandler)
     httpd.serve_forever() 
