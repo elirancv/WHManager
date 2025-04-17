@@ -5,6 +5,9 @@
 ![WHManager Logo](docs/screenshots/logo.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads/)
+[![Windows](https://img.shields.io/badge/Windows-10%2F11-blue.svg)](https://www.microsoft.com/windows)
+[![Last Commit](https://img.shields.io/github/last-commit/elirancv/WHManager)](https://github.com/elirancv/WHManager/commits/main)
 
 A modern, web-based Windows application management system that provides a Ninite-like experience using winget.
 
