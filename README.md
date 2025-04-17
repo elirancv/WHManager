@@ -140,12 +140,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Built with winget
 - Modern web technologies
 
-## 📞 Support
-
-If you encounter any issues or have questions, please [open an issue](https://github.com/elirancv/WHManager/issues) on GitHub.
-
 ---
 
 <div align="center">
-Made with ❤️ by <a href="https://github.com/elirancv">elirancv</a>
+  <sub>Built with ❤️ by <a href="https://github.com/elirancv">Eliran Cohen</a></sub>
 </div> 
