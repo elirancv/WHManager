@@ -1,0 +1,263 @@
+{
+  "categories": [
+    {
+      "name": "Essential Software",
+      "icon": "fas fa-rocket",
+      "apps": [
+        {
+          "id": "Brave.Brave",
+          "name": "Brave Browser",
+          "description": "A privacy-focused web browser with built-in ad blocking"
+        },
+        {
+          "id": "RARLab.WinRAR",
+          "name": "WinRAR",
+          "description": "File archiver utility for compression and extraction"
+        },
+        {
+          "id": "Notepad++.Notepad++",
+          "name": "Notepad++",
+          "description": "Advanced text editor with coding features"
+        }
+      ]
+    },
+    {
+      "name": "Monitoring Tools",
+      "icon": "fas fa-chart-line",
+      "apps": [
+        {
+          "id": "ALCPU.CoreTemp",
+          "name": "Core Temp",
+          "description": "CPU temperature monitoring tool"
+        },
+        {
+          "id": "Almico.SpeedFan",
+          "name": "SpeedFan",
+          "description": "System temperature and fan speed monitoring"
+        }
+      ]
+    },
+    {
+      "name": "Security & VPN",
+      "icon": "fas fa-shield-alt",
+      "apps": [
+        {
+          "id": "IDRIX.VeraCrypt",
+          "name": "VeraCrypt",
+          "description": "Disk encryption software"
+        },
+        {
+          "id": "OpenVPNTechnologies.OpenVPN",
+          "name": "OpenVPN",
+          "description": "Virtual Private Network client"
+        },
+        {
+          "id": "ShiningLight.OpenSSL.Light",
+          "name": "OpenSSL",
+          "description": "Cryptography and SSL/TLS toolkit"
+        },
+        {
+          "id": "ente-io.auth-desktop",
+          "name": "Ente Auth",
+          "description": "End-to-end encrypted authentication"
+        }
+      ]
+    },
+    {
+      "name": "Media & Music",
+      "icon": "fas fa-music",
+      "apps": [
+        {
+          "id": "VideoLAN.VLC",
+          "name": "VLC Media Player",
+          "description": "Versatile media player supporting various formats"
+        },
+        {
+          "id": "AIMP.AIMP",
+          "name": "AIMP Music Player",
+          "description": "Advanced audio player with extensive features"
+        },
+        {
+          "id": "PointPlanck.FileBot",
+          "name": "FileBot",
+          "description": "File renaming and organization tool"
+        },
+        {
+          "id": "FlorianHeidenreich.Mp3tag",
+          "name": "Mp3tag",
+          "description": "Audio file metadata editor"
+        },
+        {
+          "id": "Gyan.FFmpeg",
+          "name": "FFmpeg",
+          "description": "Multimedia framework for handling audio/video"
+        },
+        {
+          "id": "vividos.winLAME",
+          "name": "winLAME",
+          "description": "Audio encoder and converter"
+        },
+        {
+          "id": "MediaArea.MediaInfo.GUI",
+          "name": "MediaInfo (GUI)",
+          "description": "Detailed technical information about media files"
+        },
+        {
+          "id": "MediaArea.MediaInfo",
+          "name": "MediaInfo (CLI)",
+          "description": "Detailed technical information about media files"
+        }
+      ]
+    },
+    {
+      "name": "Development & Command-Line",
+      "icon": "fas fa-code",
+      "apps": [
+        {
+          "id": "Microsoft.WindowsTerminal",
+          "name": "Windows Terminal",
+          "description": "Modern terminal application for Windows"
+        },
+        {
+          "id": "Microsoft.PowerShell",
+          "name": "PowerShell",
+          "description": "Task automation and configuration management framework"
+        },
+        {
+          "id": "Python.Python.3.13",
+          "name": "Python",
+          "description": "Latest version of Python programming language"
+        },
+        {
+          "id": "Anaconda.Anaconda3",
+          "name": "Anaconda3",
+          "description": "Python distribution for data science"
+        },
+        {
+          "id": "Git.Git",
+          "name": "Git",
+          "description": "Distributed version control system"
+        },
+        {
+          "id": "Microsoft.VisualStudioCode",
+          "name": "Visual Studio Code",
+          "description": "Powerful source code editor"
+        },
+        {
+          "id": "GitHub.GitHubDesktop",
+          "name": "GitHub Desktop",
+          "description": "Git client with GUI interface"
+        },
+        {
+          "id": "ActiveDatabaseSoftware.FlySpeedSQLQuery",
+          "name": "FlySpeed SQL Query",
+          "description": "SQL database query tool"
+        },
+        {
+          "id": "cURL.cURL",
+          "name": "cURL",
+          "description": "Command-line tool for transferring data"
+        },
+        {
+          "id": "HermannSchinagl.LinkShellExtension",
+          "name": "Link Shell Extension",
+          "description": "Create symbolic links and junctions"
+        }
+      ]
+    },
+    {
+      "name": "AI Tools",
+      "icon": "fas fa-robot",
+      "apps": [
+        {
+          "id": "Anysphere.Cursor",
+          "name": "Cursor Editor",
+          "description": "AI-powered code editor"
+        },
+        {
+          "id": "lencx.ChatGPT",
+          "name": "ChatGPT Desktop",
+          "description": "Desktop client for ChatGPT"
+        }
+      ]
+    },
+    {
+      "name": "File Management & System",
+      "icon": "fas fa-folder",
+      "apps": [
+        {
+          "id": "voidtools.Everything",
+          "name": "Everything (GUI)",
+          "description": "Fast file search utility"
+        },
+        {
+          "id": "voidtools.Everything.Cli",
+          "name": "Everything (CLI)",
+          "description": "Command-line interface for Everything Search"
+        },
+        {
+          "id": "Wox.Wox",
+          "name": "Wox",
+          "description": "Launcher for quick program access"
+        },
+        {
+          "id": "PuTTY.PuTTY",
+          "name": "PuTTY",
+          "description": "SSH and telnet client"
+        },
+        {
+          "id": "TTYPlus.MTPutty",
+          "name": "MTPuTTY",
+          "description": "Multi-tabbed PuTTY interface"
+        },
+        {
+          "id": "OpenSight.FlashFXP",
+          "name": "FlashFXP",
+          "description": "FTP and SFTP client"
+        },
+        {
+          "id": "Glarysoft.GlaryUtilities",
+          "name": "Glary Utilities",
+          "description": "System optimization tools"
+        },
+        {
+          "id": "Nextcloud.NextcloudDesktop",
+          "name": "Nextcloud Desktop",
+          "description": "File sync and share client"
+        }
+      ]
+    },
+    {
+      "name": "Communication",
+      "icon": "fas fa-comments",
+      "apps": [
+        {
+          "id": "mIRC.mIRC",
+          "name": "mIRC",
+          "description": "Internet Relay Chat client"
+        },
+        {
+          "id": "Telegram.TelegramDesktop",
+          "name": "Telegram",
+          "description": "Secure messaging application"
+        }
+      ]
+    },
+    {
+      "name": "Dependencies",
+      "icon": "fas fa-puzzle-piece",
+      "apps": [
+        {
+          "id": "Microsoft.VCRedist.2010.x64",
+          "name": "VC Redist 2010 (x64)",
+          "description": "Visual C++ Runtime Libraries"
+        },
+        {
+          "id": "Microsoft.VCRedist.2010.x86",
+          "name": "VC Redist 2010 (x86)",
+          "description": "Visual C++ Runtime Libraries"
+        }
+      ]
+    }
+  ]
+} 

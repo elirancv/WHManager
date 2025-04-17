@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W1ND0WZ 4PP 1N5T4LL3R</title>
+    
+    <!-- Favicon and Meta Tags -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="data:image/png;base64,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" sizes="32x32">
+    <meta name="theme-color" content="#00ff9d">
+    <meta name="description" content="Cyberpunk-styled Windows Package Manager Installer">
+    
+    <style>
+        :root {
+            --primary-color: #00ff9d;
+            --secondary-color: #ff00ff;
+            --hover-color: #00ccff;
+            --bg-color: #0a0a0f;
+            --card-bg: #12151f;
+            --text-color: #e0e0e0;
+            --border-color: #2a2a35;
+            --neon-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+            --card-shadow: 0 0 20px rgba(0, 204, 255, 0.1);
+            --gradient: linear-gradient(135deg, rgba(0, 255, 157, 0.1), rgba(0, 204, 255, 0.1));
+        }
+
+        @font-face {
+            font-family: 'Cyberpunk';
+            src: url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(0, 255, 157, 0.05) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(0, 255, 157, 0.05) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(0, 255, 157, 0.05) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(0, 255, 157, 0.05) 75%);
+            background-size: 100% 100%, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+            background-position: 0 0, 0 0, 0 10px, 10px -10px, -10px 0px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 
+                0 0 10px var(--primary-color),
+                0 0 20px var(--primary-color),
+                0 0 40px var(--primary-color);
+            animation: glitch 5s infinite, glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: none; opacity: 1; }
+            92% { transform: skew(1deg, 0deg); opacity: 0.95; }
+            93% { transform: skew(-1deg, 0deg); opacity: 0.9; }
+            94% { transform: skew(2deg, 0deg); opacity: 0.85; }
+            95% { transform: skew(-2deg, 0deg); opacity: 0.9; }
+            96% { transform: skew(1deg, -1deg); opacity: 0.95; }
+            97% { transform: skew(-1deg, 1deg); opacity: 1; }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color); }
+            to { text-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--primary-color); }
+        }
+
+        .description {
+            font-size: 1.2rem;
+            color: var(--text-color);
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.8;
+            text-shadow: 0 0 5px var(--text-color);
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            flex-wrap: wrap;
+        }
+
+        .control-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--gradient);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            min-width: auto;
+            position: relative;
+        }
+
+        .control-button:hover {
+            background: var(--primary-color);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+        }
+
+        .control-button i {
+            font-size: 1.1rem;
+        }
+
+        .search-container {
+            flex: 1;
+            position: relative;
+            min-width: 200px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 3rem 1rem 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 8px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 10px rgba(0, 255, 157, 0.1);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--hover-color);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.2),
+                        inset 0 0 10px rgba(0, 255, 157, 0.1);
+        }
+
+        .search-input::placeholder {
+            color: rgba(0, 255, 157, 0.5);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            pointer-events: none;
+            text-shadow: 0 0 5px var(--primary-color);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            max-width: 600px;
+            background: var(--gradient);
+            border: 1px solid var(--primary-color);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .stat-value {
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 100px;
+        }
+
+        .category {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .category h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+            gap: 0.5rem;
+        }
+
+        .category h2 i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+            text-shadow: 0 0 5px var(--primary-color);
+        }
+
+        .app-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 0.8rem;
+            padding: 0.5rem;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            background: rgba(0, 255, 157, 0.02);
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+        .app-info {
+            margin-left: 0.5rem;
+            color: var(--primary-color);
+            opacity: 0.6;
+            cursor: help;
+            font-size: 0.85rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            background: rgba(0, 255, 157, 0.05);
+            position: relative;
+            text-shadow: none;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            backdrop-filter: blur(2px);
+        }
+
+        .app-info::before {
+            content: '?';
+            font-family: 'Share Tech Mono', monospace;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transform: translateY(-1px);
+        }
+
+        .app-info:hover {
+            opacity: 1;
+            transform: scale(1.1) translateY(-1px);
+            box-shadow: 
+                0 0 10px rgba(0, 255, 157, 0.3),
+                0 0 20px rgba(0, 255, 157, 0.2),
+                inset 0 0 8px rgba(0, 255, 157, 0.3);
+            text-shadow: 0 0 5px var(--primary-color);
+            background: rgba(0, 255, 157, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .app-info:hover::before {
+            animation: glowPulse 2s infinite;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 5px var(--primary-color); }
+            50% { text-shadow: 0 0 15px var(--primary-color); }
+        }
+
+        .tooltip {
+            position: fixed;
+            background: rgba(18, 21, 31, 0.95);
+            color: var(--primary-color);
+            padding: 0.8rem 1.2rem;
+            border-radius: 4px;
+            border: 1px solid var(--primary-color);
+            font-size: 0.9rem;
+            z-index: 1000;
+            box-shadow: 
+                0 0 20px rgba(0, 255, 157, 0.2),
+                0 0 40px rgba(0, 255, 157, 0.1),
+                inset 0 0 10px rgba(0, 255, 157, 0.1);
+            text-shadow: 0 0 5px var(--primary-color);
+            pointer-events: none;
+            white-space: normal;
+            max-width: 300px;
+            line-height: 1.4;
+            backdrop-filter: blur(10px);
+            transform-origin: center;
+            animation: tooltipFade 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes tooltipFade {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .app-wrapper {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            min-width: 0;
+            gap: 0.5rem;
+            padding-right: 0.2rem;
+        }
+
+        .app-label {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
+        }
+
+        .app-checkbox {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 1.2rem;
+            height: 1.2rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            margin-right: 0.8rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            background: rgba(0, 255, 157, 0.05);
+        }
+
+        .app-checkbox:checked {
+            background: var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+        }
+
+        .app-checkbox:checked:after {
+            content: '✓';
+            position: absolute;
+            color: var(--bg-color);
+            font-size: 0.8rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .app-item:hover {
+            background: rgba(0, 255, 157, 0.05);
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .install-button {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, var(--primary-color), var(--hover-color));
+            color: var(--bg-color);
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            animation: buttonPulse 2s infinite;
+        }
+
+        @keyframes buttonPulse {
+            0% { box-shadow: 0 0 20px rgba(0, 255, 157, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(0, 255, 157, 0.5); }
+            100% { box-shadow: 0 0 20px rgba(0, 255, 157, 0.3); }
+        }
+
+        .install-button:hover {
+            transform: translateX(-50%) translateY(-2px);
+            box-shadow: 0 0 50px rgba(0, 255, 157, 0.6);
+        }
+
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .controls {
+                grid-template-columns: 1fr;
+            }
+
+            .search-container {
+                width: 100%;
+            }
+
+            .category h2 {
+                font-size: 1.2rem;
+            }
+
+            .category-counter {
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+                min-width: 60px;
+            }
+        }
+
+        /* Loading overlay for installer generation */
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 15, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .loading-text {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            text-shadow: 0 0 10px var(--primary-color);
+            animation: loadingText 2s infinite;
+        }
+
+        @keyframes loadingText {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 4px solid transparent;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            box-shadow: 0 0 20px var(--primary-color);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Custom tooltip */
+        [data-tooltip] {
+            position: relative;
+        }
+
+        [data-tooltip]:before {
+            content: none;
+        }
+
+        [data-tooltip]:hover:before {
+            content: none;
+        }
+
+        .category-counter {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            background: rgba(0, 255, 157, 0.1);
+            padding: 0.4rem 1rem;
+            border-radius: 12px;
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+            min-width: 70px;
+            text-align: center;
+            font-family: 'Share Tech Mono', monospace;
+            text-shadow: 0 0 5px var(--primary-color);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <canvas id="matrix" class="matrix-bg"></canvas>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">G3N3R4T1NG 1N5T4LL3R...</div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>W1ND0WZ 4PP 1N5T4LL3R</h1>
+            <p class="description">Select the applications you want to install. We'll create a custom installer just for you.</p>
+        </header>
+
+        <div class="controls">
+            <button class="control-button" onclick="selectAll()" data-tooltip="Select all applications">
+                <i class="fas fa-check-double"></i>
+                All
+            </button>
+            <button class="control-button" onclick="deselectAll()" data-tooltip="Deselect all applications">
+                <i class="fas fa-times"></i>
+                None
+            </button>
+            <button class="control-button" onclick="selectCommonApps()" data-tooltip="Select commonly used applications">
+                <i class="fas fa-star"></i>
+                Essential
+            </button>
+            <button class="control-button" onclick="openAppsManager()" data-tooltip="Add or remove applications">
+                <i class="fas fa-cog"></i>
+                Manage Apps
+            </button>
+            <div class="search-container" data-tooltip="Search for applications by name">
+                <input type="text" class="search-input" placeholder="Search apps..." onkeyup="filterApps(this.value)">
+                <i class="fas fa-search search-icon"></i>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <i class="fas fa-check-circle"></i>
+                <span>Selected:</span>
+                <span class="stat-value" id="selected-count">0</span>
+            </div>
+            <div class="stat">
+                <i class="fas fa-list"></i>
+                <span>Total Apps:</span>
+                <span class="stat-value" id="total-count">0</span>
+            </div>
+        </div>
+
+        <div class="categories" id="categories-container">
+            <!-- Categories will be loaded dynamically -->
+        </div>
+
+        <button class="install-button" onclick="generateInstaller()">GENERATE INSTALLER</button>
+    </div>
+
+    <script>
+        // Enhanced Matrix rain effect
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const chars = '01アイウエオカキクケコサシスセソタチツテト';
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = 1;
+        }
+
+        function drawMatrix() {
+            ctx.fillStyle = 'rgba(10, 10, 15, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#00ff9d';
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        setInterval(drawMatrix, 50);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+
+        // App management functions
+        function updateCounters() {
+            const totalApps = document.querySelectorAll('.app-checkbox').length;
+            const selectedApps = document.querySelectorAll('.app-checkbox:checked').length;
+            
+            const selectedCountElement = document.getElementById('selected-count');
+            const totalCountElement = document.getElementById('total-count');
+            
+            if (selectedCountElement && totalCountElement) {
+                selectedCountElement.textContent = selectedApps;
+                totalCountElement.textContent = totalApps;
+            }
+
+            // Update category counters
+            document.querySelectorAll('.category').forEach(category => {
+                const total = category.querySelectorAll('.app-checkbox').length;
+                const selected = category.querySelectorAll('.app-checkbox:checked').length;
+                
+                // Add counter if it doesn't exist
+                let counter = category.querySelector('h2 .category-counter');
+                if (!counter) {
+                    counter = document.createElement('span');
+                    counter.className = 'category-counter';
+                    category.querySelector('h2').appendChild(counter);
+                }
+                counter.textContent = `${selected}/${total}`;
+            });
+        }
+
+        function selectAll() {
+            document.querySelectorAll('.app-checkbox').forEach(checkbox => {
+                checkbox.checked = true;
+            });
+            updateCounters();
+        }
+
+        function deselectAll() {
+            document.querySelectorAll('.app-checkbox').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            updateCounters();
+        }
+
+        function selectCommonApps() {
+            const commonApps = [
+                'Brave Browser',
+                'VLC Media Player',
+                'WinRAR',
+                'Notepad++',
+                'VS Code',
+                'Git',
+                'Python 3.13',
+                'Windows Terminal'
+            ];
+
+            document.querySelectorAll('.app-checkbox').forEach(checkbox => {
+                const label = checkbox.nextElementSibling.textContent.trim();
+                checkbox.checked = commonApps.includes(label);
+            });
+            updateCounters();
+        }
+
+        function filterApps(searchTerm) {
+            searchTerm = searchTerm.toLowerCase();
+            document.querySelectorAll('.app-item').forEach(item => {
+                const label = item.querySelector('label').textContent.toLowerCase();
+                if (label.includes(searchTerm)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function sortApps() {
+            document.querySelectorAll('.category').forEach(category => {
+                const appList = category.querySelector('.app-list');
+                const apps = Array.from(appList.children);
+                
+                apps.sort((a, b) => {
+                    const labelA = a.querySelector('label').textContent.toLowerCase();
+                    const labelB = b.querySelector('label').textContent.toLowerCase();
+                    return labelA.localeCompare(labelB);
+                });
+                
+                apps.forEach(app => appList.appendChild(app));
+            });
+        }
+
+        function showLoading() {
+            document.getElementById('loadingOverlay').style.display = 'flex';
+        }
+
+        function hideLoading() {
+            document.getElementById('loadingOverlay').style.display = 'none';
+        }
+
+        async function generateInstaller() {
+            const selectedApps = Array.from(document.querySelectorAll('.app-checkbox:checked'))
+                .map(checkbox => checkbox.dataset.id);
+
+            if (selectedApps.length === 0) {
+                alert('PL3453 53L3CT 4T L345T 0N3 4PPL1C4T10N!');
+                return;
+            }
+
+            showLoading();
+
+            // Sort selected apps alphabetically
+            selectedApps.sort();
+
+            // Create the batch file content with enhanced installation flags
+            let batchContent = '@echo off\n';
+            batchContent += 'echo [+] 1N5T4LL1NG 53L3CT3D 4PPL1C4T10N5...\n';
+            batchContent += `echo [*] Total apps to install: ${selectedApps.length}\n`;
+            batchContent += 'echo [*] Running in silent mode with no upgrades\n';
+            batchContent += 'echo [*] Installation started at: %DATE% %TIME%\n\n';
+            
+            // Add error counter variables
+            batchContent += 'set "success_count=0"\n';
+            batchContent += 'set "error_count=0"\n\n';
+
+            selectedApps.forEach((appId, index) => {
+                batchContent += `echo [${index + 1}/${selectedApps.length}] Installing ${appId}...\n`;
+                // Enhanced installation command with additional flags
+                batchContent += `winget install --id "${appId}" ^
+    --exact ^
+    --silent ^
+    --no-upgrade ^
+    --accept-package-agreements ^
+    --disable-interactivity ^
+    --scope machine ^
+    --force\n`;
+                
+                // Error handling and progress tracking
+                batchContent += `if %ERRORLEVEL% EQU 0 (\n`;
+                batchContent += `    echo [+] Successfully installed ${appId}\n`;
+                batchContent += `    set /a "success_count+=1"\n`;
+                batchContent += `) else (\n`;
+                batchContent += `    echo [!] Failed to install ${appId} - Error code: %ERRORLEVEL%\n`;
+                batchContent += `    set /a "error_count+=1"\n`;
+                batchContent += `)\n\n`;
+            });
+
+            // Add detailed installation summary
+            batchContent += 'echo.\n';
+            batchContent += 'echo [+] 1N5T4LL4T10N C0MPL3T3!\n';
+            batchContent += 'echo [*] Installation Summary:\n';
+            batchContent += 'echo [*] - Installation Mode: Silent\n';
+            batchContent += 'echo [*] - Upgrade Skip: Enabled\n';
+            batchContent += 'echo [*] - Installation Scope: Machine-wide\n';
+            batchContent += 'echo [*] - Force Install: Enabled\n';
+            batchContent += 'echo [*] - Total Apps: %success_count% successful, %error_count% failed\n';
+            batchContent += 'echo [*] - End Time: %DATE% %TIME%\n';
+            batchContent += 'echo.\n';
+            batchContent += 'echo [*] PR355 4NY K3Y T0 3X1T...\n';
+            batchContent += 'pause > nul';
+
+            // Simulate some processing time
+            await new Promise(resolve => setTimeout(resolve, 1500));
+
+            // Create and download the batch file
+            const blob = new Blob([batchContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'w1nd0wz_4pp_1n5t4ll3r.bat';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+
+            hideLoading();
+        }
+
+        // Load apps configuration
+        async function loadAppsConfig() {
+            try {
+                const response = await fetch('apps_config.json');
+                if (!response.ok) throw new Error('Failed to load apps configuration');
+                const config = await response.json();
+                return config;
+            } catch (error) {
+                console.error('Error loading apps configuration:', error);
+                return null;
+            }
+        }
+
+        // Generate HTML for categories and apps
+        function generateCategoryHTML(category) {
+            const appsHTML = category.apps.map(app => `
+                <div class="app-item">
+                    <div class="app-wrapper">
+                        <input type="checkbox" id="${app.id.replace(/\./g, '-')}" class="app-checkbox" data-id="${app.id}">
+                        <label for="${app.id.replace(/\./g, '-')}" class="app-label">${app.name}</label>
+                        <span class="app-info" data-tooltip="${app.description}"></span>
+                    </div>
+                </div>
+            `).join('');
+
+            return `
+                <div class="category">
+                    <h2><i class="${category.icon}"></i>${category.name}</h2>
+                    <div class="app-list">
+                        ${appsHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Initialize the app
+        async function initializeApp() {
+            const config = await loadAppsConfig();
+            if (!config) {
+                alert('Failed to load apps configuration. Please refresh the page.');
+                return;
+            }
+
+            const categoriesContainer = document.getElementById('categories-container');
+            categoriesContainer.innerHTML = config.categories.map(generateCategoryHTML).join('');
+
+            // Initialize tooltips and counters
+            document.querySelectorAll('.app-info').forEach(info => {
+                info.addEventListener('mouseenter', showTooltip);
+                info.addEventListener('mouseleave', hideTooltip);
+                info.addEventListener('touchstart', showTooltip, { passive: true });
+                info.addEventListener('touchend', hideTooltip);
+            });
+
+            document.querySelectorAll('.app-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', updateCounters);
+            });
+
+            // Sort apps and update counters
+            sortApps();
+            updateCounters();
+        }
+
+        // Call initialize when DOM is loaded
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+        // Tooltip functions
+        function showTooltip(e) {
+            const tooltip = e.target.getAttribute('data-tooltip');
+            if (!tooltip) return;
+
+            // Remove any existing tooltips
+            hideAllTooltips();
+
+            const tooltipEl = document.createElement('div');
+            tooltipEl.className = 'tooltip';
+            tooltipEl.textContent = tooltip;
+            document.body.appendChild(tooltipEl);
+
+            const rect = e.target.getBoundingClientRect();
+            const tooltipRect = tooltipEl.getBoundingClientRect();
+
+            let left = rect.left + (rect.width - tooltipRect.width) / 2;
+            let top = rect.top - tooltipRect.height - 10;
+
+            // Keep tooltip within viewport
+            if (left < 10) left = 10;
+            if (left + tooltipRect.width > window.innerWidth - 10) {
+                left = window.innerWidth - tooltipRect.width - 10;
+            }
+            if (top < 10) top = rect.bottom + 10;
+
+            tooltipEl.style.left = `${left}px`;
+            tooltipEl.style.top = `${top}px`;
+            tooltipEl.style.opacity = '1';
+
+            // Store the tooltip element reference
+            e.target.tooltipEl = tooltipEl;
+        }
+
+        function hideTooltip(e) {
+            if (e.target.tooltipEl) {
+                e.target.tooltipEl.remove();
+                e.target.tooltipEl = null;
+            }
+        }
+
+        function hideAllTooltips() {
+            document.querySelectorAll('.tooltip').forEach(tooltip => tooltip.remove());
+        }
+
+        // Add tooltip event listeners to control buttons
+        document.querySelectorAll('[data-tooltip]').forEach(element => {
+            element.addEventListener('mouseenter', showTooltip);
+            element.addEventListener('mouseleave', hideTooltip);
+        });
+
+        // Function to open apps manager
+        function openAppsManager() {
+            window.open('apps_manager.html', '_blank', 'width=1200,height=800');
+        }
+    </script>
+</body>
+</html>

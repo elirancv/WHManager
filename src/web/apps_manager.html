@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4PP5 M4N4G3R</title>
+    
+    <!-- Favicon and Meta Tags -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠️</text></svg>" type="image/svg+xml">
+    <link rel="icon" type="image/png" href="data:image/png;base64,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" sizes="32x32">
+    <meta name="theme-color" content="#00ff9d">
+    <meta name="description" content="Cyberpunk-styled Windows App Package Manager">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #00ff9d;
+            --secondary-color: #ff00ff;
+            --hover-color: #00ccff;
+            --bg-color: #0a0a0f;
+            --card-bg: #12151f;
+            --text-color: #e0e0e0;
+            --border-color: #2a2a35;
+            --danger-color: #ff3366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 2rem;
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, rgba(0, 255, 157, 0.05) 25%, transparent 25%),
+                linear-gradient(-45deg, rgba(0, 255, 157, 0.05) 25%, transparent 25%);
+            background-size: 100% 100%, 20px 20px, 20px 20px;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 
+                0 0 10px var(--primary-color),
+                0 0 20px var(--primary-color),
+                0 0 40px var(--primary-color);
+            animation: glitch 5s infinite, glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glitch {
+            0%, 100% { transform: none; opacity: 1; }
+            92% { transform: skew(1deg, 0deg); opacity: 0.95; }
+            93% { transform: skew(-1deg, 0deg); opacity: 0.9; }
+            94% { transform: skew(2deg, 0deg); opacity: 0.85; }
+            95% { transform: skew(-2deg, 0deg); opacity: 0.9; }
+            96% { transform: skew(1deg, -1deg); opacity: 0.95; }
+            97% { transform: skew(-1deg, 1deg); opacity: 1; }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color); }
+            to { text-shadow: 0 0 20px var(--primary-color), 0 0 40px var(--primary-color); }
+        }
+
+        .category {
+            background: var(--card-bg);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--primary-color);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+            animation: glow 2s infinite alternate;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                rgba(0, 255, 157, 0.1), 
+                transparent 40%,
+                transparent 60%,
+                rgba(0, 204, 255, 0.1));
+            pointer-events: none;
+        }
+
+        .category-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+            padding-bottom: 1rem;
+        }
+
+        .app-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .app-item {
+            background: rgba(0, 255, 157, 0.02);
+            padding: 1.5rem;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 1.5rem;
+            border: 1px solid rgba(0, 255, 157, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary-color);
+            opacity: 0.3;
+            transition: all 0.3s ease;
+        }
+
+        .app-item:hover {
+            background: rgba(0, 255, 157, 0.05);
+            border-color: var(--primary-color);
+            transform: translateX(5px);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+        }
+
+        .app-item:hover::before {
+            opacity: 1;
+        }
+
+        .app-details {
+            display: grid;
+            gap: 1rem;
+        }
+
+        input, textarea {
+            background: var(--card-bg);
+            border: 1px solid var(--primary-color);
+            color: var(--text-color);
+            padding: 1rem;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: inset 0 0 10px rgba(0, 255, 157, 0.1);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.2),
+                        inset 0 0 10px rgba(0, 255, 157, 0.1);
+            border-color: var(--hover-color);
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background: linear-gradient(45deg, var(--primary-color), var(--hover-color));
+            color: var(--bg-color);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.3);
+        }
+
+        button i {
+            font-size: 1.1rem;
+        }
+
+        .delete-button {
+            background: linear-gradient(45deg, var(--danger-color), #ff0000);
+        }
+
+        .add-app {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(0, 255, 157, 0.05);
+            border-radius: 12px;
+            text-align: center;
+            border: 1px dashed var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .add-app:hover {
+            background: rgba(0, 255, 157, 0.1);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.1);
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            justify-content: center;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 15px;
+            border: 1px solid var(--primary-color);
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .success-message {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(0, 255, 157, 0.95);
+            color: var(--bg-color);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: bold;
+            animation: slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: none;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--primary-color);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%) translateY(-50%); opacity: 0; }
+            to { transform: translateX(0) translateY(0); opacity: 1; }
+        }
+
+        .category-icon-preview {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            opacity: 0.3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .category-header {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .controls {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>4PP5 M4N4G3R</h1>
+        
+        <div class="controls">
+            <button onclick="saveChanges()">
+                <i class="fas fa-save"></i> Save Changes
+            </button>
+            <button onclick="addCategory()">
+                <i class="fas fa-folder-plus"></i> Add Category
+            </button>
+            <button onclick="window.close()">
+                <i class="fas fa-times"></i> Close
+            </button>
+        </div>
+
+        <div id="categories-container"></div>
+    </div>
+
+    <div class="success-message" id="successMessage">
+        <i class="fas fa-check-circle"></i> Changes saved successfully!
+    </div>
+
+    <script>
+        let config = null;
+
+        async function loadConfig() {
+            try {
+                const response = await fetch('apps_config.json');
+                config = await response.json();
+                renderCategories();
+            } catch (error) {
+                console.error('Error loading configuration:', error);
+                alert('Failed to load configuration');
+            }
+        }
+
+        function renderCategories() {
+            const container = document.getElementById('categories-container');
+            container.innerHTML = config.categories.map((category, categoryIndex) => `
+                <div class="category">
+                    <i class="${category.icon} category-icon-preview"></i>
+                    <div class="category-header">
+                        <input type="text" value="${category.name}" placeholder="Category Name"
+                            onchange="updateCategoryName(${categoryIndex}, this.value)">
+                        <input type="text" value="${category.icon}" placeholder="FontAwesome Icon Class"
+                            onchange="updateCategoryIcon(${categoryIndex}, this.value)">
+                        <button class="delete-button" onclick="deleteCategory(${categoryIndex})">
+                            <i class="fas fa-trash"></i> Delete Category
+                        </button>
+                    </div>
+                    
+                    <div class="app-list">
+                        ${category.apps.map((app, appIndex) => `
+                            <div class="app-item">
+                                <div class="app-details">
+                                    <input type="text" value="${app.name}" placeholder="App Name" 
+                                        onchange="updateApp(${categoryIndex}, ${appIndex}, 'name', this.value)">
+                                    <input type="text" value="${app.id}" placeholder="Winget Package ID"
+                                        onchange="updateApp(${categoryIndex}, ${appIndex}, 'id', this.value)">
+                                    <textarea placeholder="App Description" 
+                                        onchange="updateApp(${categoryIndex}, ${appIndex}, 'description', this.value)">${app.description}</textarea>
+                                </div>
+                                <button class="delete-button" onclick="deleteApp(${categoryIndex}, ${appIndex})">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="add-app">
+                        <button onclick="addApp(${categoryIndex})">
+                            <i class="fas fa-plus"></i> Add New App
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function updateCategoryName(categoryIndex, value) {
+            config.categories[categoryIndex].name = value;
+        }
+
+        function updateCategoryIcon(categoryIndex, value) {
+            config.categories[categoryIndex].icon = value;
+        }
+
+        function updateApp(categoryIndex, appIndex, field, value) {
+            config.categories[categoryIndex].apps[appIndex][field] = value;
+        }
+
+        function deleteApp(categoryIndex, appIndex) {
+            if (confirm('Are you sure you want to delete this app?')) {
+                config.categories[categoryIndex].apps.splice(appIndex, 1);
+                renderCategories();
+            }
+        }
+
+        function addApp(categoryIndex) {
+            config.categories[categoryIndex].apps.push({
+                name: 'New App',
+                id: 'Publisher.AppName',
+                description: 'App description'
+            });
+            renderCategories();
+        }
+
+        function deleteCategory(categoryIndex) {
+            if (confirm('Are you sure you want to delete this category and all its apps?')) {
+                config.categories.splice(categoryIndex, 1);
+                renderCategories();
+            }
+        }
+
+        function addCategory() {
+            config.categories.push({
+                name: 'New Category',
+                icon: 'fas fa-folder',
+                apps: []
+            });
+            renderCategories();
+        }
+
+        async function saveChanges() {
+            try {
+                const response = await fetch('apps_config.json', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(config, null, 2)
+                });
+                
+                if (response.ok) {
+                    const message = document.getElementById('successMessage');
+                    message.style.display = 'block';
+                    setTimeout(() => {
+                        message.style.display = 'none';
+                    }, 3000);
+                } else {
+                    throw new Error('Failed to save changes');
+                }
+            } catch (error) {
+                console.error('Error saving changes:', error);
+                alert('Failed to save changes. Make sure you have write permissions.');
+            }
+        }
+
+        // Load configuration when page loads
+        document.addEventListener('DOMContentLoaded', loadConfig);
+    </script>
+</body>
+</html> 
